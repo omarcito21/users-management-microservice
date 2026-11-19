@@ -42,3 +42,4 @@ build/
 
 /spec/
 .env
+.environments/

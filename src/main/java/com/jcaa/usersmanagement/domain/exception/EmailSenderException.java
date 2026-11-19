@@ -20,6 +20,12 @@ public final class EmailSenderException extends DomainException {
         String.format(MESSAGE_WITH_DETAIL, destinationEmail, smtpError));
   }
 
+  public static EmailSenderException becauseApiFailed(
+      final String destinationEmail, final String apiError) {
+    return new EmailSenderException(
+        String.format("No se pudo enviar el correo a '%s'. Error en la API de Brevo: %s", destinationEmail, apiError));
+  }
+
   public static EmailSenderException becauseSendFailed(final Throwable cause) {
     return new EmailSenderException(DEFAULT_MESSAGE, cause);
   }
