@@ -26,7 +26,7 @@ services:
       - key: BREVO_FROM_ADDRESS
         sync: false
       - key: BREVO_FROM_NAME
-        value: Gestion de Usuarios
+        value: Omar Coronel
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRATION_SECONDS
